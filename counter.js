@@ -1,9 +1,11 @@
+import { Verma } from './Strings/strings.js';
+
 export function setupCounter(element) {
-  let counter = 0
+  let counter = 0;
   const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
+    counter = count;
+    element.innerHTML = `There are ${counter} ${Verma()}`;
+  };
+  element.addEventListener('click', () => setCounter(counter + 1));
+  setCounter(0);
 }
